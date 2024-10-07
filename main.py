@@ -24,16 +24,24 @@ with col2:
 st.markdown('<p style="font-size:18px;">Below you can find some of the apps I have build in Python. Feel free to contact me!</p>',
 		    unsafe_allow_html=True)
 
-col3, col4 = st.columns(2)
+col3, empty_col, col4 = st.columns([2.0, 0.5, 2.0])
 
 df = pd.read_csv("data.csv", sep=";") #default : comma(,)
 
 with col3:
 	for index, row in df[:10].iterrows():
 		st.header(row["title"])
+		description = row["description"]
+		st.write(description)
+		st.image(f"images/{row["image"]}")
+		st.markdown(f"[source code]({row['url']})")
 
 with col4:
 	for index, row in df[10:].iterrows():
 		st.header(row["title"])
+		description = row["description"]
+		st.write(description)
+		st.image(f"images/{row["image"]}")
+		st.markdown(f"[source code]({row['url']})")
 
 
