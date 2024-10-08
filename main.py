@@ -9,7 +9,7 @@ with col1:
 	st.image("images/Lee_Dong_Geun.png")
 
 with col2:
-	st.title("Andrew Lee")
+	st.title("Andrew(DG) Lee")
 	contents = """
 	Hello, I am Andrew Lee. I am a python developer, and managing director of Hanon Systems Thailand and South Africa. 
 	I was on board in Thailand in 2021 and I used to work as planning director in Seoul, Korea.
